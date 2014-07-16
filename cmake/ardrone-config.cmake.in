@@ -1,0 +1,54 @@
+# ARDrone CMake config file
+#
+# This file sets the following variables:
+# ARDrone_FOUND - Always TRUE.
+# ARDrone_INCLUDE_DIRS - Directories containing the ARDrone include files.
+# ARDrone_IDL_DIRS - Directories containing the ARDrone IDL files.
+# ARDrone_LIBRARIES - Libraries needed to use ARDrone.
+# ARDrone_DEFINITIONS - Compiler flags for ARDrone.
+# ARDrone_VERSION - The version of ARDrone found.
+# ARDrone_VERSION_MAJOR - The major version of ARDrone found.
+# ARDrone_VERSION_MINOR - The minor version of ARDrone found.
+# ARDrone_VERSION_REVISION - The revision version of ARDrone found.
+# ARDrone_VERSION_CANDIDATE - The candidate version of ARDrone found.
+
+message(STATUS "Found ARDrone-@PROJECT_VERSION@")
+set(ARDrone_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(ARDrone_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(ARDrone_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(ARDrone_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(ARDrone_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(ARDrone_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(ARDrone_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(ARDrone_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(ARDrone_VERSION @PROJECT_VERSION@)
+set(ARDrone_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(ARDrone_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(ARDrone_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(ARDrone_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+
