@@ -24,6 +24,7 @@ string(TOLOWER ${RTC_NAME} PACKAGE_NAME)
 set(PACKAGE_VERSION "${RTC_VERSION_MAJOR}.${RTC_VERSION_MINOR}.${RTC_VERSION_PATCH}")
 
 set(IDL_FILES ""
+              DroneService.idl
 )
 
 set(OTHER_SRCS CMakeLists.txt Doxyfile.in

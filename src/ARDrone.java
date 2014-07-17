@@ -36,12 +36,14 @@ public class ARDrone implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFunc {
             "conf.default.velocityGainTranslation", "1.0",
             "conf.default.velocityGainRotation", "1.0",
             "conf.default.use_camera", "vertical",
+            "conf.default.ipAddress", "192.168.1.1",
             // Widget
             "conf.__widget__.velocityGainTranslation", "text",
             "conf.__widget__.velocityGainRotation", "text",
             "conf.__widget__.use_camera", "radio",
+            "conf.__widget__.ipAddress", "text",
             // Constraints
-            "conf.__constraints__.use_camera", "(vertial, horizontal)",
+            "conf.__constraints__.use_camera", "(vertial,horizontal)",
     	    ""
             };
 //  </rtc-template>

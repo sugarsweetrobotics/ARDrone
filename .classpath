@@ -2,6 +2,18 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="${javaRoot}/jar/OpenRTM-aist-1.1.0.jar"/>
+	<classpathentry kind="lib" path="jar/ARDroneForP5.jar"/>
+	<classpathentry kind="lib" path="jar/commons-cli-1.1.jar"/>
+	<classpathentry kind="lib" path="jar/commons-net-1.4.1.jar"/>
+	<classpathentry kind="lib" path="jar/LogicalTimeTriggeredEC.jar"/>
+	<classpathentry kind="lib" path="jar/NameserviceFile.jar"/>
+	<classpathentry kind="lib" path="jar/OpenRTM-aist-1.1.0.jar"/>
+	<classpathentry kind="lib" path="jar/rtcd.jar"/>
+	<classpathentry kind="lib" path="jar/rtcprof.jar"/>
+	<classpathentry kind="lib" path="jar/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="jar/slf4j-jcl-1.7.7.jar"/>
+	<classpathentry kind="lib" path="jar/xuggle-xuggler-5.4.jar"/>
+	<classpathentry kind="lib" path="jar/xuggle-xuggler-arch-x86_64-xuggle-darwin11.jar"/>
+	<classpathentry kind="lib" path="jar/xuggle-xuggler-noarch-5.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

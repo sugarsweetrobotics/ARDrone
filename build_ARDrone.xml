@@ -15,11 +15,16 @@
 		<mkdir dir="${dest}" />
 	</target>
 
+	<target name="idlcompile"  depends="mkdir">
+		<exec executable="${java.home}/../bin/idlj">
+			<arg line="-td 'src' -i '/Users/ysuga/workspace/' -fall 'idl/DroneService.idl'"/>
+		</exec>
+	</target>
 
-	<target name="compile" depends="mkdir">
+	<target name="compile" depends="idlcompile">
 		<javac srcdir="${source}" destdir="${dest}">
 			<classpath>
-				<fileset dir="${env.RTM_JAVA_ROOT}/jar">
+				<fileset dir="${env.HOME}/rtm/jar">
 					<include name="*.jar"/>
 				</fileset>
 			</classpath>

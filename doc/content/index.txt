@@ -109,6 +109,7 @@ Parameter        Data type          Default Value    Effect
 velocityGainTranslation double             1.0              
 velocityGainRotation double             1.0              
 use_camera       string             vertical         
+ipAddress        string             192.168.1.1      
 ================ ================== ================ ======
 
 Ports
@@ -124,6 +125,7 @@ camera          OutPort     RTC::CameraImage
 orientation     OutPort     RTC::TimedOrientation3D        
 attitude        OutPort     RTC::TimedDouble               
 currentVelocity OutPort     RTC::TimedVelocity3D           
+DroneService    ServicePort ssr::DroneService              
 =============== =========== ============================== =======
 
 Examples

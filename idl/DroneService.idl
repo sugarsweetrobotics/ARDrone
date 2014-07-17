@@ -1,0 +1,6 @@
+module ssr {
+  interface DroneService {
+    void takeOff();
+    void landing();
+  };
+};
