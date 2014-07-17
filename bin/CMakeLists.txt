@@ -1,4 +1,4 @@
-set(comp_srcs ARDrone.cpp )
+set(comp_srcs ARDrone.cpp DroneServiceSVC_impl.cpp )
 set(standalone_srcs ARDroneComp.cpp)
 
 if (DEFINED OPENRTM_INCLUDE_DIRS)
