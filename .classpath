@@ -13,8 +13,8 @@
 	<classpathentry kind="lib" path="jar/slf4j-api-1.7.7.jar"/>
 	<classpathentry kind="lib" path="jar/slf4j-jcl-1.7.7.jar"/>
 	<classpathentry kind="lib" path="jar/xuggle-xuggler-5.4.jar"/>
-	<classpathentry kind="lib" path="jar/xuggle-xuggler-arch-x86_64-xuggle-darwin11.jar"/>
 	<classpathentry kind="lib" path="jar/xuggle-xuggler-noarch-5.4.jar"/>
 	<classpathentry kind="lib" path="jar/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="jar/xuggle-xuggler-arch-i686-w64-mingw32.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
